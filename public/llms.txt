@@ -1,0 +1,31 @@
+# Digitale Barrierefreiheit · Moritz Vollmer
+
+> A German-language introduction to digital accessibility, WCAG principles, and the scope of Germany's Barrierefreiheitsstärkungsgesetz (BFSG), created by Moritz Vollmer.
+
+## Canonical Page
+
+- https://barrierefreiheit.moritzvollmer.de/
+
+## Topics
+
+- The four WCAG principles: perceivable, operable, understandable, and robust
+- Practical benefits of accessible websites
+- A cautious overview of products and services covered by the BFSG
+- Accessibility tools created by Moritz Vollmer
+
+The BFSG has applied since 28 June 2025 to specific products and services. It does not automatically apply to every website or every business. The page provides general orientation and is not legal advice.
+
+## Related Tools
+
+- WCAG 2.2 checklist: https://checkliste.moritzvollmer.de/
+- Contrast tool: https://farbtool.moritzvollmer.de/
+- More projects: https://moritzvollmer.de/projekte/
+
+## Author
+
+- Moritz Vollmer: https://moritzvollmer.de/
+
+## Primary Legal Sources
+
+- BFSG FAQ, Federal Accessibility Agency: https://www.bundesfachstelle-barrierefreiheit.de/DE/Barrierefreiheitsstaerkungsgesetz/FAQ/faq_node
+- BFSG section 3: https://www.gesetze-im-internet.de/bfsg/__3.html

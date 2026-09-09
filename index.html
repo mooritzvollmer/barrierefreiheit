@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Digitale Barrierefreiheit verständlich erklärt: Grundlagen, WCAG-Prinzipien, BFSG-Einordnung und praktische Werkzeuge von Moritz Vollmer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Moritz Vollmer" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://barrierefreiheit.moritzvollmer.de/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Digitale Barrierefreiheit · Moritz Vollmer" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Digitale Barrierefreiheit verständlich erklärt" />
+    <meta property="og:description" content="Grundlagen, WCAG-Prinzipien, BFSG-Einordnung und praktische Werkzeuge für barrierefreie Websites." />
+    <meta property="og:url" content="https://barrierefreiheit.moritzvollmer.de/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Digitale Barrierefreiheit verständlich erklärt" />
+    <meta name="twitter:description" content="Grundlagen, WCAG-Prinzipien, BFSG-Einordnung und praktische Werkzeuge." />
+    <title>Digitale Barrierefreiheit erklärt | Moritz Vollmer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://barrierefreiheit.moritzvollmer.de/#website",
+            "url": "https://barrierefreiheit.moritzvollmer.de/",
+            "name": "Digitale Barrierefreiheit · Moritz Vollmer",
+            "inLanguage": "de",
+            "publisher": { "@id": "https://moritzvollmer.de/#person" }
+          },
+          {
+            "@type": "Article",
+            "@id": "https://barrierefreiheit.moritzvollmer.de/#article",
+            "url": "https://barrierefreiheit.moritzvollmer.de/",
+            "headline": "Digitale Barrierefreiheit verständlich erklärt",
+            "description": "Grundlagen digitaler Barrierefreiheit, die vier WCAG-Prinzipien und eine vorsichtige Einordnung des Barrierefreiheitsstärkungsgesetzes.",
+            "dateModified": "2026-09-03",
+            "inLanguage": "de",
+            "isPartOf": { "@id": "https://barrierefreiheit.moritzvollmer.de/#website" },
+            "author": { "@id": "https://moritzvollmer.de/#person" },
+            "about": [
+              { "@type": "Thing", "name": "Digitale Barrierefreiheit" },
+              { "@type": "Thing", "name": "Web Content Accessibility Guidelines" },
+              { "@type": "Thing", "name": "Barrierefreiheitsstärkungsgesetz" }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://moritzvollmer.de/#person",
+            "name": "Moritz Vollmer",
+            "url": "https://moritzvollmer.de/"
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Moritz" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="centerMaxWidthContainer">
+        <div class="menu-wrapper">
+          <div class="logo">
+            <div class="logo-wrapper">
+              <svg aria-label="Gezacktes Logo bestehend aus M und V" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+                <rect class="logo-color-white" width="250" height="250" fill="#fff"/>
+                <path d="M236.83,90.34c-2.47-2.47-6.48-2.47-8.96,0l-50.34,50.34v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.35-.15-.52-.06-.22-.12-.45-.21-.66-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08-.03-.03-.06-.04-.08-.07-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.5-.27-.2-.11-.39-.23-.59-.31-.2-.08-.41-.13-.62-.19-.19-.06-.37-.13-.57-.17-.35-.07-.71-.1-1.07-.11-.06,0-.11-.02-.17-.02-.07,0-.14.02-.21.02-.34.01-.68.04-1.02.1-.21.04-.41.12-.61.18-.19.06-.39.1-.57.18-.22.09-.43.22-.64.34-.15.08-.31.15-.45.25-.32.21-.62.46-.89.73-.02.02-.05.04-.07.06l-50.34,50.34v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.34-.15-.52-.06-.22-.12-.45-.21-.67-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08s-.06-.04-.08-.07c-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.49-.27-.2-.11-.39-.23-.6-.31-.2-.08-.42-.13-.63-.2-.18-.05-.36-.13-.55-.16-.38-.08-.77-.11-1.16-.12h-.16c-.39,0-.78.04-1.16.12-.19.04-.37.11-.55.16-.21.06-.42.11-.63.2s-.4.21-.6.31c-.17.09-.34.16-.49.27-.32.21-.61.46-.88.72-.03.02-.06.04-.08.07l-50.33,50.33v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.35-.15-.52-.06-.22-.12-.45-.21-.66-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08-.03-.03-.06-.04-.08-.07-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.5-.27-.2-.11-.39-.23-.59-.31-.2-.08-.41-.13-.62-.19-.19-.06-.37-.13-.57-.17-.35-.07-.71-.1-1.07-.11-.06,0-.11-.02-.17-.02-.07,0-.14.02-.21.02-.34.01-.68.04-1.02.1-.21.04-.41.12-.61.18-.19.06-.39.1-.57.18-.22.09-.43.22-.64.34-.15.08-.31.15-.45.25-.32.21-.62.46-.89.73-.02.02-.05.04-.07.06l-30.57,30.57c-2.47,2.47-2.47,6.48,0,8.96,1.24,1.24,2.86,1.85,4.48,1.85s3.24-.62,4.48-1.85l19.76-19.76v45.85c0,.42.04.83.13,1.24.04.18.1.34.15.52.06.22.12.45.21.67.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.18-.04.35-.11.53-.16.22-.06.44-.11.65-.2.21-.09.4-.21.6-.31.16-.09.33-.16.49-.27.35-.23.67-.49.97-.79h0l50.33-50.33v45.85c0,.42.04.83.13,1.24.04.18.1.35.15.52.06.22.12.45.21.66.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.19-.04.36-.11.54-.16.22-.06.43-.11.64-.2s.4-.21.6-.32c.16-.09.33-.16.49-.26.35-.23.67-.49.97-.79h0l50.34-50.33v45.85c0,.42.04.83.13,1.24.04.18.1.35.15.52.06.22.12.45.21.66.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.19-.04.36-.11.54-.16.22-.06.43-.11.64-.2s.4-.21.6-.32c.16-.09.33-.16.49-.26.35-.23.67-.49.97-.79h0l61.15-61.15c2.47-2.47,2.47-6.48,0-8.96h-.06Z" fill="#b60000"/>
+              </svg>
+            </div>
+            <nav aria-label="Breadcrumb Navigation">
+              <ul class="logo-breadcrumb">
+                <li>
+                  <a tabindex="0" href="https://moritzvollmer.de/" target="_blank" rel="noopener noreferrer author" class="logo-breadcrumb-first">
+                    Moritz Vollmer
+                  </a>
+                </li>
+                <span class="logo-breadcrumb-seperator">
+                  //
+                </span>
+                <li>
+                  <span class="logo-breadcrumb-main">
+                    Barrierefreiheit
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button aria-label="Einstellungen öffnen" class="settings button button-negative" id="openModal">
+            <span class="label-desktop">
+              Einstellungen
+            </span>
+            <span class="label-mobile">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding">
+      <div id="modalOverlay" class="box modal-overlay hidden"></div>
+        <div id="modal" class="modal hidden" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+          <fieldset>
+          <legend aria-label="Wähle deine bevorzugten Einstellungen für bessere Lesbarkeit." id="modalTitle">Einstellungen</legend>
+              <label class="modal-item">
+                <input type="checkbox" id="darkMode">
+                  <span class="modal-item-inner">
+                    <span class="lead">Dunkelmodus</span>
+                    <span class="modal-item-meta">Reduziert Helligkeit für augenschonendes Lesen, besonders in dunkler Umgebung.</span>
+                  </span>
+                </label>
+              <label class="modal-item lead">
+                <input type="checkbox" id="easyLanguage">
+                  <span class="modal-item-inner">
+                    <span class="lead">Leichte Sprache</span>
+                    <span class="modal-item-meta">Vereinfachte Texte für bessere Verständlichkeit und Barrierefreiheit.</span>
+                  </span>
+              </label>
+              <label class="modal-item lead">
+                <input type="checkbox" id="largeText">
+                <span class="modal-item-inner">
+                    <span class="lead">Größere Schrift</span>
+                    <span class="modal-item-meta">Erhöht die Schriftgröße für bessere Lesbarkeit ohne Anstrengung.</span>
+                  </span>
+              </label>
+              <button class="button" id="saveSettings">Speichern</button>
+          </fieldset>
+        </div>
+        <div class="header">
+          <h1>Barrierefreiheit</h1>
+          <div class="note">
+            <div class="note-inner">
+              <h2 class="lead">Das BFSG gilt seit dem 28. Juni 2025</h2>
+              <p>für bestimmte Produkte und Dienstleistungen</p>
+            </div>
+          </div>
+          <!-- <p class="lead language--regular">
+            Nicht nur eine Frage der Inklusion
+          </p>
+          <p class="language--simple"><i>Das ist die <b>Leichte Sprache</b> Version dieser Seite.</i></p> -->
+          <div class="header-text">
+            <div>
+              <p class="language--regular">
+              Seit dem 28. Juni 2025 gilt das <a href="https://www.bundesfachstelle-barrierefreiheit.de/DE/Barrierefreiheitsstaerkungsgesetz/FAQ/faq_node" target="_blank" rel="noopener noreferrer">Barrierefreiheitsstärkungsgesetz (BFSG)</a>. Es setzt den European Accessibility Act (EAA) in deutsches Recht um und erfasst bestimmte Produkte und Dienstleistungen – nicht pauschal jede Website und jedes Unternehmen.
+              </p>
+              <p class="language--simple">
+                Mit dieser Checkliste kannst du schnell sehen, wie barrierefrei deine Website ist.
+              </p>
+              <p class="language--regular">
+                Barrierefreiheit bedeutet, Websites so zu gestalten, dass sie für alle Benutzer:innen zugänglich sind – unabhängig von ihren individuellen körperlichen oder technischen Voraussetzungen.
+              </p>
+            </div>
+            <div>
+              <p class="language--regular">
+                Bei der Konzeption, Gestaltung und technischen Umsetzung werden die gesetzlichen Grundlagen wie die BITV 2.0 und das Barrierefreiheitsstärkungsgesetz (BFSG) sowie die zugrundeliegenden Standards wie die Web Content Accessibility Guidelines (WCAG) berücksichtigt.
+              </p>
+              <p class="language--regular">
+                 Die WCAG ordnen Anforderungen vier Prinzipien zu: Inhalte und Funktionen sollen <a href="#wahrnehmbar">wahrnehmbar</a>, <a href="#bedienbar">bedienbar</a>, <a href="#verständlich">verständlich</a> und <a href="#robust">robust</a> sein.
+              </p>
+              <p class="language--simple">
+              Du kannst die Checkliste direkt abarbeiten. Was du gemacht hast, wird gespeichert. Du kannst es jederzeit wieder ansehen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mainContent">
+      <section class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding cards">
+        <h2 class="h3">Nicht nur eine Frage der Inklusion</h2>
+        <h3 class="lead">Eine barrierefreie Website ist...</h3>
+        <ul class="cards-content">
+          <li class="cards-item" id="wahrnehmbar">
+            <h4 class="lead cards-title">wahrnehmbar</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"/></svg>
+            </div>
+            <p>
+            Alle Inhalte und Bedienelemente deiner Website müssen für alle Nutzer:innen wahrnehmbar sein – unabhängig von individuellen körperlichen oder technischen Voraussetzungen. Das sind z.B. alternative Texte für Bilder, Untertitel für Videos, farblich ausreichende Kontraste oder anpassbare Inhalte.
+            </p>
+          </li>
+          <li class="cards-item" id="bedienbar">
+            <h4 class="lead cards-title">bedienbar</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128 180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm288 0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h232c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12z"/></svg>
+            </div>
+            <p>Alle Funktionen deiner Website müssen für alle nutzbar sein – unabhängig von Fähigkeiten oder Eingabemethoden. Dazu gehören eine vollständige Tastatursteuerung, ausreichend Zeit für Interaktionen, eine klare Navigation und der Verzicht auf übermäßige visuelle Effekte (z.B. Flimmern).</p>
+          </li>
+          <li class="cards-item" id="verständlich">
+            <h4 class="lead cards-title">verständlich</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg>
+            </div>
+            <p>
+              Informationen und Bedienung müssen für alle verständlich sein. Deine Website sollte vorhersehbar und konsistent gestaltet sein, während Nutzer:innen bei der Eingabe von Daten unterstützt werden.
+            </p>
+          </li>
+          <li class="cards-item" id="robust">
+            <h4 class="lead cards-title">robust</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"/></svg>
+            </div>
+            <p>
+              Inhalte müssen robust und mit verschiedenen Browsern sowie assistiven Technologien kompatibel sein. Dies erfordert valides HTML, korrekte Verschachtelung und semantische Auszeichnung für langfristige technische Zugänglichkeit.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding list">
+        <article class="list-wrapper">
+          <div class="list-title">
+            <h2 class="h4">Barrierefreiheit ist für…</h2>
+            <div class="list-image">
+              <img src="./src/images/a11y.png" alt="Grafik mit mehreren barrierefreien Icons auf einem Screen und einer Rollstuhlfahrerin">   
+            </div>
+          </div>
+          <ul class="list-content content">
+            <li class="content-item">
+              <h3 class="lead lead--first">alle</h3>
+              <p>
+                Barrierefreiheit sorgt dafür, dass eine Webseite für alle und ohne Hindernisse nutzbar ist – ohne fremde Hilfe. Sie ist nicht nur für Menschen mit Beeinträchtigung wichtig, sondern nützt auch:
+              </p>
+              <ul>
+                <li>Benutzer:innen mit langsamer Internetverbindung oder alter Technik</li>
+                <li>Benutzer:innen mit geringen digitalen Kenntnissen</li>
+                <li>Benutzer:innen mit anderen Muttersprachen</li>
+                <li>…</li>
+              </ul>
+            </li>
+            <li class="content-item">
+              <h3 class="lead">Benutzer:innen mit einer Sehbeeinträchtigung oder -behinderung</h3>
+              <p>
+                Gut durchdachte Farbkonzepte mit ausreichendem Kontrast, skalierbare Layouts und gut lesbare Schriftarten helfen Menschen mit Sehbeeinträchtigungen. Ein optionaler Hochkontrastmodus kann zusätzlichen Komfort bieten.
+              </p>
+              <p>
+                Assistive Technologien wie Screenreader oder Braillezeilen benötigen eine klar strukturierte Website mit semantischem HTML und Alternativtexten für Bilder, um Inhalte verständlich wiederzugeben.
+              </p>
+              <p>
+                Kennst du eigentlich schon meine Tools zur Unterstützung deiner Barrierefreiheit?
+              </p>
+              <ul>
+                <li>Interaktive <a href="https://checkliste.moritzvollmer.de/" target="_blank" rel="noopener noreferrer">Checkliste</a> für einen ersten Eindruck der Barrierefreiheit</li>
+                <li><a href="https://farbkontraste.moritzvollmer.de/">Farbkontraste</a> prüfen, für ein barrierefreies Farbkonzept</li>
+              </ul>
+            </li>
+            <li class="content-item">
+              <h3 class="lead">Benutzer:innen mit einer motorischen Einschränkung</h3>
+              <p>
+                Für Menschen mit motorischen Einschränkungen muss die Navigation besonders benutzerfreundlich sein. Die Webseite sollte vollständig per Touchscreen, Joystick, blick- oder mundgesteuertem Cursor sowie Tastatur bedienbar sein. Schaltflächen müssen ausreichend groß und mit genügend Abstand platziert sein.
+              </p>
+              <p>
+                Neben dem Design sind auch technische Anpassungen erforderlich.
+              </p>
+            </li>
+            <li class="content-item">
+              <h3 class="lead">Benutzer:innen mit einer Hörbeeinträchtigung</h3>
+              <p>
+                Einige Gehörlose haben Schwierigkeiten mit der Schriftsprache, da ihnen die Lautsprache fehlt. Eine Version in Leichter Sprache kann hier unterstützen.
+              </p>
+              <p>
+                Videos lassen sich leicht mit Untertiteln versehen, für Audio-Inhalte können Transkripte bereitgestellt werden.
+              </p>
+            </li>
+            <li class="content-item">
+              <h3 class="lead">Benutzer:innen mit anderen Beeinträchtigungen</h3>
+              <p>
+                Animationen sollten vorsichtig eingesetzt werden, da sie bei Epilepsie oder vestibulären Störungen Schwindel, Kopfschmerzen oder sogar Anfälle auslösen können. Blinkende Effekte sollten vermieden werden.
+              </p>
+              <p>
+                Für Menschen mit Lernschwierigkeiten oder geringen Deutschkenntnissen kann ebenfalls ein Angebot in einfacher oder leichter Sprache hilfreich sein.
+              </p>
+            </li>
+            <li class="content-item">
+              <h3 class="lead">Dich</h3>
+              <p>
+                Barrierefreies Webdesign erweitert die Reichweite von Unternehmen, Vereinen und Institutionen – oder einfach von deiner Website.
+              </p>
+              <p>
+                Ein nutzer:innenfreundliches Bedienkonzept und schnelle Ladezeiten reduzieren die Absprungrate und bieten dir wirtschaftliche Vorteile! Zudem verbessert Barrierefreiheit die Suchmaschinenoptimierung.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding cards">
+        <h2 class="h3">Warum barrierefreie Websites?</h2>
+        <h3 class="lead"><a href="https://www.bundesfachstelle-barrierefreiheit.de/DE/Barrierefreiheitsstaerkungsgesetz/FAQ/faq_node" target="_blank" rel="noopener noreferrer">BFSG</a>, Inklusion und bessere Bedienbarkeit – warum das Thema zählt.</h3>
+        <ul class="cards-content">
+          <li class="cards-item">
+            <h4 class="lead cards-title">gesetzliche Anforderungen</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M48 0C21.53 0 0 21.53 0 48v64c0 8.84 7.16 16 16 16h80V48C96 21.53 74.47 0 48 0zm208 412.57V352h288V96c0-52.94-43.06-96-96-96H111.59C121.74 13.41 128 29.92 128 48v368c0 38.87 34.65 69.65 74.75 63.12C234.22 474 256 444.46 256 412.57zM288 384v32c0 52.93-43.06 96-96 96h336c61.86 0 112-50.14 112-112 0-8.84-7.16-16-16-16H288z"/></svg>            </div>
+            <p>
+              Seit dem <b>28. Juni 2025</b> gilt das Barrierefreiheitsstärkungsgesetz (BFSG) für bestimmte Produkte und Dienstleistungen. Ob ein konkretes Angebot erfasst ist, muss im Einzelfall geprüft werden.            </p>
+          </li>
+          <li class="cards-item">
+            <h4 class="lead cards-title">inklusive Digitalisierung</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zm323-128.4l-27.8-28.1c-4.6-4.7-12.1-4.7-16.8-.1l-104.8 104-45.5-45.8c-4.6-4.7-12.1-4.7-16.8-.1l-28.1 27.9c-4.7 4.6-4.7 12.1-.1 16.8l81.7 82.3c4.6 4.7 12.1 4.7 16.8.1l141.3-140.2c4.6-4.7 4.7-12.2.1-16.8z"/></svg>
+            </div>
+            <p>
+              Eine barrierefreie Website soll für alle eigenständig zugänglich und nutzbar sein und ist die Basis für Teilhabe und Selbstbestimmung.
+              </p>
+          </li>
+          <li class="cards-item">
+            <h4 class="lead cards-title">bessere Bedienbarkeit</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128 180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm288 0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h232c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12z"/></svg>
+            </div>
+            <p>
+              Barrierefreie Websites sind für alle. Eine logische Navigation erleichtert die Orientierung, und barrierefreie Farbkonzepte verbessern die Lesbarkeit, selbst bei Sonneneinstrahlung.
+            </p>
+          </li>
+          <li class="cards-item">
+            <h4 class="lead cards-title">mobile Nutzung</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"/></svg>
+            </div>
+            <p>
+              Damit eine Website auch auf kleinen Bildschirmen oder bei großer Skalierung gut nutzbar bleibt, ist ein Responsive Design erforderlich. Zudem sollte sie für geringe mobile Bandbreiten optimiert sein.
+            </p>
+          </li>
+          <li class="cards-item">
+            <h4 class="lead cards-title">mehr Reichweite</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"/></svg>
+            </div>
+            <p>
+              Etwa 30% der Bevölkerung haben Sehbeeinträchtigungen, motorische Einschränkungen, Konzentrationsschwächen oder eingeschränkte Lesekompetenz. Fast 10% sind schwerbehindert.
+            </p>
+          </li>
+          <li class="cards-item">
+            <h4 class="lead cards-title">Suchmaschinenoptimierung</h4>
+            <div class="cards-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+            </div>
+            <p>
+              Barrierefreies Webdesign erfordert eine semantische Struktur im Quelltext. Dadurch verstehen sowohl assistive Technologien wie Screenreader als auch Suchmaschinen-Crawler den Kontext besser.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding accordion">
+        <h2 class="h3">Was du unbedingt wissen solltest</h2>
+        <div class="accordion">
+          <div class="panel">
+            <button class="panel-trigger" type="button" aria-expanded="false" id="first" aria-controls="panelFirst">
+              <h3 class="lead">Was ist das BFSG?</h3>
+            </button>
+            <div class="panel-content" aria-labelledby="first" id="panelFirst">
+              <div class="panel-inner">
+              <p>Das Barrierefreiheitsstärkungsgesetz (BFSG) setzt den European Accessibility Act in deutsches Recht um. Seit dem 28. Juni 2025 gelten Barrierefreiheitsanforderungen für die im Gesetz genannten Produkte und Dienstleistungen. Dazu zählen unter anderem bestimmte Hardware, Selbstbedienungsterminals, Telekommunikations- und Bankdienstleistungen, E-Books, Teile des Personenverkehrs und Dienstleistungen im elektronischen Geschäftsverkehr.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <button class="panel-trigger" type="button" aria-expanded="false" id="products-trigger" aria-controls="products-panel">
+              <h3 class="lead">Für welche Produkte gilt das BFSG?</h3>
+            </button>
+            <div class="panel-content" aria-labelledby="products-trigger" id="products-panel">
+              <div class="panel-inner">
+              <ul>
+                <li>Hardwaresysteme einschließlich Betriebssysteme</li>
+                <li>Selbstbedienungsterminals wie Zahlungsterminals, Geldautomaten, Fahrausweisautomaten, Check-in-Automaten und Informationsautomaten</li>
+                <li>Verbrauchergeräte mit interaktivem Leistungsumfang für Telekommunikationsdienste oder den Zugang zu audiovisuellen Mediendiensten</li>
+                <li>E-Book-Lesegeräte</li>
+              </ul>
+              <p>…die nach dem 28.06.2025 in den Verkehr gebracht werden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <button class="panel-trigger" type="button" aria-expanded="false" id="services-trigger" aria-controls="services-panel">
+              <h3 class="lead">Für welche Dienstleistungen gilt das BFSG?</h3>
+            </button>
+            <div class="panel-content" aria-labelledby="services-trigger" id="services-panel">
+              <div class="panel-inner">
+                <ul>
+                  <li>Telekommunikationsdienste</li>
+                  <li>Elemente von Personenbeförderungsdiensten wie Webseiten, Apps, elektronische Tickets, Ticketdienste, Verkehrsinformationen und interaktive Selbstbedienungsterminals</li>
+                  <li>Bankdienstleistungen für Verbraucher:innen</li>
+                  <li>E-Books sowie die zugehörige Software</li>
+                  <li>Dienstleistungen im elektronischen Geschäftsverkehr</li>
+                </ul>
+                <p>…die nach dem 28.06.2025 für Verbraucher:innen in den Verkehr gebracht werden.</p>              
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <button class="panel-trigger" type="button" aria-expanded="false" id="scope-trigger" aria-controls="scope-panel">
+              <h3 class="lead">Wen betrifft das BFSG?</h3>
+            </button>
+            <div class="panel-content" aria-labelledby="scope-trigger" id="scope-panel">
+              <div class="panel-inner">
+                <p>
+                  Das BFSG betrifft Wirtschaftsakteure, deren Produkte oder Dienstleistungen in seinen Anwendungsbereich fallen. Kleinstunternehmen, die Dienstleistungen anbieten oder erbringen, sind ausgenommen. Als Kleinstunternehmen gelten Unternehmen mit weniger als zehn Beschäftigten und höchstens 2 Mio. € Jahresumsatz oder Jahresbilanzsumme. Für Produkte gilt diese Ausnahme nicht pauschal.
+                </p>
+                <p>
+                  Regelmäßig nicht vom BFSG erfasst sind…
+                </p>
+                <ul>
+                  <li>B2B-Unternehmen (wenn eindeutig erkennbar)</li>
+                  <li>reine Präsentationswebsites, soweit über sie keine vom BFSG erfasste Verbraucherdienstleistung angeboten wird</li>
+                </ul>
+                <p>Daneben kennt das Gesetz eng geregelte Ausnahmen, etwa bei unverhältnismäßiger Belastung oder grundlegender Veränderung. Das ist keine automatische Befreiung für kleine Unternehmen und muss anhand des konkreten Falls beurteilt und dokumentiert werden.</p>              
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <button class="panel-trigger" type="button" aria-expanded="false" id="enforcement-trigger" aria-controls="enforcement-panel">
+              <h3 class="lead">Was passiert bei Missachtung des BFSG?</h3>
+            </button>
+            <div class="panel-content" aria-labelledby="enforcement-trigger" id="enforcement-panel">
+              <div class="panel-inner">
+                <p>
+                  Bei Verstößen können Marktüberwachungsbehörden die Bereitstellung von Produkten oder Dienstleistungen einschränken oder untersagen sowie Rücknahmen oder Rückrufe anordnen.
+                </p>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <section class="cool coolBackgroundDefault centerMaxWidthContainer">
+        <h2 class="h3">Was bringt dir eine Webseite, wenn sie nicht verstanden wird?</h2>
+      </section>
+      <footer class="cool coolBackgroundDefault centerMaxWidthContainer componentPadding">
+        <div class="footer">
+          <div class="logo">
+            <div class="logo-wrapper">
+              <svg aria-label="gezacktes Logo bestehend aus M und V" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+                <rect class="logo-color-white" width="250" height="250" fill="#b60000"/>
+                <path d="M236.83,90.34c-2.47-2.47-6.48-2.47-8.96,0l-50.34,50.34v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.35-.15-.52-.06-.22-.12-.45-.21-.66-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08-.03-.03-.06-.04-.08-.07-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.5-.27-.2-.11-.39-.23-.59-.31-.2-.08-.41-.13-.62-.19-.19-.06-.37-.13-.57-.17-.35-.07-.71-.1-1.07-.11-.06,0-.11-.02-.17-.02-.07,0-.14.02-.21.02-.34.01-.68.04-1.02.1-.21.04-.41.12-.61.18-.19.06-.39.1-.57.18-.22.09-.43.22-.64.34-.15.08-.31.15-.45.25-.32.21-.62.46-.89.73-.02.02-.05.04-.07.06l-50.34,50.34v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.34-.15-.52-.06-.22-.12-.45-.21-.67-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08s-.06-.04-.08-.07c-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.49-.27-.2-.11-.39-.23-.6-.31-.2-.08-.42-.13-.63-.2-.18-.05-.36-.13-.55-.16-.38-.08-.77-.11-1.16-.12h-.16c-.39,0-.78.04-1.16.12-.19.04-.37.11-.55.16-.21.06-.42.11-.63.2s-.4.21-.6.31c-.17.09-.34.16-.49.27-.32.21-.61.46-.88.72-.03.02-.06.04-.08.07l-50.33,50.33v-45.85c0-.42-.04-.83-.13-1.24-.04-.18-.1-.35-.15-.52-.06-.22-.12-.45-.21-.66-.08-.2-.2-.39-.3-.58-.09-.17-.17-.35-.28-.51-.21-.32-.46-.61-.72-.88-.03-.03-.04-.06-.07-.08-.03-.03-.06-.04-.08-.07-.27-.26-.57-.51-.88-.72-.16-.11-.33-.18-.5-.27-.2-.11-.39-.23-.59-.31-.2-.08-.41-.13-.62-.19-.19-.06-.37-.13-.57-.17-.35-.07-.71-.1-1.07-.11-.06,0-.11-.02-.17-.02-.07,0-.14.02-.21.02-.34.01-.68.04-1.02.1-.21.04-.41.12-.61.18-.19.06-.39.1-.57.18-.22.09-.43.22-.64.34-.15.08-.31.15-.45.25-.32.21-.62.46-.89.73-.02.02-.05.04-.07.06l-30.57,30.57c-2.47,2.47-2.47,6.48,0,8.96,1.24,1.24,2.86,1.85,4.48,1.85s3.24-.62,4.48-1.85l19.76-19.76v45.85c0,.42.04.83.13,1.24.04.18.1.34.15.52.06.22.12.45.21.67.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.18-.04.35-.11.53-.16.22-.06.44-.11.65-.2.21-.09.4-.21.6-.31.16-.09.33-.16.49-.27.35-.23.67-.49.97-.79h0l50.33-50.33v45.85c0,.42.04.83.13,1.24.04.18.1.35.15.52.06.22.12.45.21.66.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.19-.04.36-.11.54-.16.22-.06.43-.11.64-.2s.4-.21.6-.32c.16-.09.33-.16.49-.26.35-.23.67-.49.97-.79h0l50.34-50.33v45.85c0,.42.04.83.13,1.24.04.18.1.35.15.52.06.22.12.45.21.66.08.2.2.39.31.58.09.17.17.35.28.51.23.34.49.66.78.96h0c.29.29.62.56.97.79.16.11.33.18.49.27.2.11.39.23.6.31.21.09.43.14.65.2.18.05.35.12.53.16.41.08.82.13,1.24.13s.83-.04,1.24-.13c.19-.04.36-.11.54-.16.22-.06.43-.11.64-.2s.4-.21.6-.32c.16-.09.33-.16.49-.26.35-.23.67-.49.97-.79h0l61.15-61.15c2.47-2.47,2.47-6.48,0-8.96h-.06Z" fill="#fff"/>
+              </svg>
+            </div>
+            <nav class="logo-breadcrumb">
+              <ul class="logo-breadcrumb-list">
+                <li>
+                  <a tabindex="0" target="_blank" rel="noopener noreferrer author" href="https://moritzvollmer.de/" class="link logo-breadcrumb-first">
+                    Moritz Vollmer
+                  </a>
+                </li>
+                <li>
+                  <span class=" logo-breadcrumb-seperator">
+                    //
+                  </span>
+                </li>
+                <li>
+                  <span class="logo-breadcrumb-main">
+                    Barrierefreiheit
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer-examples">
+            <h4 class="lead">Mehr zum Thema <b>Barrierefreiheit</b></h4>
+            <div class="button-wrapper">
+              <!-- <button class="button button--secondary" href="#0">Barrierefreiheit</button>   -->
+              <a class="button button--secondary" href="https://checkliste.moritzvollmer.de/" target="_blank" rel="noopener noreferrer">Checkliste</a>
+              <a class="button button--secondary" href="https://farbtool.moritzvollmer.de/" target="_blank" rel="noopener noreferrer">Farbkontraste prüfen</a>
+            </div>
+          </div>
+         <nav class="footer-links" aria-label="Footer-Navigation">
+            <ul class="footer-links-list">
+              <li><a tabindex="0" class="link" href="https://moritzvollmer.de/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+              <li><a tabindex="0" class="link" href="https://moritzvollmer.de/projekte/" target="_blank" rel="noopener noreferrer">Weitere Projekte</a></li>
+              <li><a tabindex="0" class="link" href="https://moritzvollmer.de/impressum/" target="_blank" rel="noopener noreferrer">Impressum</a></li>
+              <li><a tabindex="0" class="link" href="https://moritzvollmer.de/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutz</a></li>
+            </ul>
+          </nav>
+          <span class="footer-last">2026 © Moritz Vollmer</span>
+        </div>
+          <div class="disclaimer">
+            <p>💡 Alle Angaben sind ohne Gewähr. Ich gebe dir keine rechtliche Beratung!</p>
+          </div>
+      </footer>
+    </main>
+
+    <div id="root"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

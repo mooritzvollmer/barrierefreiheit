@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barrierefreiheit.moritzvollmer.de/sitemap.xml
