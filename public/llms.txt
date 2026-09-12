@@ -19,7 +19,6 @@ The BFSG has applied since 28 June 2025 to specific products and services. It do
 
 - WCAG 2.2 checklist: https://checkliste.moritzvollmer.de/
 - Contrast tool: https://farbtool.moritzvollmer.de/
-- More projects: https://moritzvollmer.de/projekte/
 
 ## Author
 
